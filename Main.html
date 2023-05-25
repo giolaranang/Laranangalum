@@ -23,8 +23,13 @@
           <button onclick="confirmalert()">Save</button>
       </p>
       <script>
-          function buttonalert(){
-              confirm("Are you sure?");
+          function confirmalert(){
+              let confirmalert = confirm("Are you sure?");
+              if (confirmalert){
+                  alert("saved!");
+              }else{
+                  alert("cancelled")
+              }
           }
       </script>
       

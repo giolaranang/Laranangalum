@@ -1,0 +1,44 @@
+
+select{
+    text-align-last:center;
+    padding-right: 29px;
+    direction: rtl;
+    margin-bottom: 10px;
+ } 
+body{
+    font-family: 'Exo', sans-serif;
+}
+
+.scroll-bg {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  padding-top: 20%;
+  padding-bottom: 330px;
+  background-image: url('indexbg.jpg');
+  background-size: cover;
+}
+
+.center {
+  text-align: center;
+  margin: 0;
+}
+.manual {
+    overflow: auto;
+    height: 600px;
+    width: 90%;
+    margin: auto;
+}
+.outerParentShow{
+ border-radius: 10px; 
+ border: 2px solid gray;
+ padding: 10px;
+}
+
+.indexButtons{
+  width: 500px;  
+}
+
+.calculator{
+  margin-left: 10px;
+}

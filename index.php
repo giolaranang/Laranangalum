@@ -19,16 +19,12 @@
       <div class="form-group">
           <select name="name" class="form-control form-control-lg">
              <option value="" disabled selected>Click here to Select an Employee</option>
-             <option value ="Alfy">Alfy</option>
-             <option value ="Erwin">Erwin</option>
              <option value ="Francis">Francis</option>
              <option value ="Gio">Gio</option>
              <option value ="Jomar">Jomar</option>
-             <option value ="Joseph">Joseph</option>
              <option value ="Kennedy">Kennedy</option>
              <option value ="Ramir">Ramir</option>
              <option value ="Richmon">Richmon</option>
-             <option value ="Rudy">Rudy</option>
              <option value ="Kiko">Kiko</option>
              <option value ="Bryan">Bryan</option>
           </select>

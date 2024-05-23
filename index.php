@@ -20,7 +20,7 @@
           <select name="name" class="form-control form-control-lg">
              <option value="" disabled selected>Click here to Select an Employee</option>
              <option value ="Francis">Francis</option>
-             <option value ="Gio">Giio</option>
+             <option value ="Gio">Gioo</option>
              <option value ="Jomar">Jomar</option>
              <option value ="Kennedy">Kennedy</option>
              <option value ="Ramir">Ramir</option>

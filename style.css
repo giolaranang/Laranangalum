@@ -20,8 +20,8 @@ body{
 }
 
 .center {
-  text-align: center;
-  margin: 0;
+    text-align: center;
+    margin: 0;
 }
 .manual {
     overflow: auto;
@@ -30,15 +30,74 @@ body{
     margin: auto;
 }
 .outerParentShow{
- border-radius: 10px; 
- border: 2px solid gray;
- padding: 10px;
+   border-radius: 10px; 
+   border: 2px solid gray;
+   padding: 10px;
 }
 
 .indexButtons{
-  width: 500px;  
+    width: 500px;  
 }
 
 .calculator{
-  margin-left: 10px;
+    margin-left: 10px;
+}
+
+.texts p{
+    padding : 0px;
+    margin-bottom : 5px;
+}
+
+#empform{
+    display:inline; 
+}
+
+#inneremployee{
+    float:left;
+    margin-left:5%;
+}
+
+#innerprice{
+   display:inline;
+   margin-right: 0;
+   color:green;
+}
+
+.texts #date{
+    color:black;
+}
+
+hr{
+ background-color: #5F9EA0;
+ border-top: 3px dashed #2F4F4F;
+ width: 25%;
+ margin:0 auto;
+ margin-bottom:5px;
+ margin-top:10px;
+}
+
+.expenses{
+    width: 100%;
+}
+
+#changebutton{
+    display:inline;
+}
+
+#Iresult{
+    text-size:10px;
+    margin:0;
+    display:inline;
+    color:green;
+}
+
+#Eresult{
+    text-size:10px;
+    margin:0;
+    display:inline;
+    color:#CA002A; 
+}
+
+.manual .Back_button{
+
 }

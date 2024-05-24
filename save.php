@@ -2,19 +2,18 @@
 $name = $_POST["name"];
 $date = $_POST["date"];
 $price = $_POST["price"];
-
-//echo $name." ".$date." ".$price;
+$description = $_POST["description"];
 
 include "dbaseConn.php";
 
 //Date
 //Employee
 //Price
+//Description
 
-$insertdata = "Insert into employee (Date, Employee, Price) Values ('$date','$name','$price')";
+$insertdata = "Insert into employee (Date, Employee, Price, Description) Values ('$date','$name','$price', '$description')";
 
 if ($conn->query($insertdata)===TRUE){
-   //echo "<script>history.go(-1);</script>";
    header('Location: ' . $_SERVER["HTTP_REFERER"] );
 exit;
 }else{

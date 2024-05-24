@@ -19,28 +19,34 @@ $result = $conn->query($readdata);
 $employees=array(); 
 if ($result->num_rows > 0){
     while ($row = $result -> fetch_assoc()){
-  
        if (in_array($row["Date"],$employees)){
-           //echo "may kaparehas na date";
-           $date ="";
+           //"may kaparehas na date";
+           $findate =null;
+           $same=true;
        }else{
            array_push($employees,$row["Date"]);
            $date = $row["Date"];
+           $findate = strtotime($date);
+           $same = false;
        }
-        echo "<div class='texts'>".$date." ".$row ["Employee"]." ".$row["Price"]."<form action = 'deleteindiv.php' method='post'>
+             if($same!=1){
+                 echo "<hr>";
+             }
+        echo "<div class='texts'><p id='date'>";
+        if($same!=1){
+        echo date("m/d/Y",$findate);
+        }
+        echo "</p><div id='inneremployee'>".$row ["Employee"]."</div> ".$row["Description"].": <div id='innerprice'>".$row["Price"]."<form action = 'deleteindiv.php' id='empform' method='post'>
              <input name='Id' type='hidden' value=". $row["ID"].">
              <input onclick='return deleteindivalert()'class='btn btn-danger btn-sm' id='deleteID' type='submit' value='Delete'/>
-             </form>
-             <hr>
+             </form></div>
              </div>";
-             
     }
 }else{
    echo "0 results";
 }
 
 $conn->close();
-//var_dump($employees);
 ?>
     </h1>
     <Button onclick="backhome()"class="btn btn-outline-secondary">Back</button>
@@ -50,10 +56,6 @@ $conn->close();
    
 </html>
         <script>
-          
-          //function LoadOnce(){ 
-            //  window.location.reload(); 
-        //  }
          function deleteindivalert(){
               let deletealert = confirm ("Delete this record?");
               if(deletealert){

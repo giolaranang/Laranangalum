@@ -3,7 +3,6 @@ select{
     text-align-last:center;
     padding-right: 29px;
     direction: rtl;
-    margin-bottom: 10px;
  } 
 body{
     font-family: 'Exo', sans-serif;
@@ -13,8 +12,6 @@ body{
   height: 100%;
   width: 100%;
   position: fixed;
-  padding-top: 20%;
-  padding-bottom: 330px;
   background-image: url('indexbg.jpg');
   background-size: cover;
 }
@@ -25,7 +22,6 @@ body{
 }
 .manual {
     overflow: auto;
-    height: 600px;
     width: 90%;
     margin: auto;
 }
@@ -37,10 +33,6 @@ body{
 
 .indexButtons{
     width: 500px;  
-}
-
-.calculator{
-    margin-left: 10px;
 }
 
 .texts p{
@@ -98,6 +90,92 @@ hr{
     color:#CA002A; 
 }
 
-.manual .Back_button{
+/*Responsive Design*/
+/*
+1920 - big desktop
+1600 - medium desktop
+1440 - big laptop
+1366 - medium laptop
+1280 - small laptop
+1200 and below mobile devices (probably landscape)
+1024 - ipad landscape
+768 - ipad portrait
+767 - mobile devices (probably portrait)
+*/
+.column {
+  float:  left;
+  width:   50%;
+  padding-top:10px;
+  padding-bottom:10px;
+}
 
+.menu:after{
+  content:"";
+  display: table;
+  clear:both;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+.login{
+  float:right;
+  width:30%;
+}
+
+.menu{
+  margin-left:5%;
+  margin-right:5%;
+  padding:5px;
+}
+
+.carousel-control{
+  margin-top:20%;
+  height:400px;
+}
+
+.slideshow{
+ margin-left:20%;
+ margin-right:20%;
+ margin-top:10px;
+ height:300px;
+}
+
+.item img{
+max-height: 400px;
+/*max-width: 500px;*/
+}
+
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+.login{
+  float:right;
+  width:30%;
+}
+
+.menu{
+  margin-left:5%;
+  margin-right:5%;
+  padding:5px;
+}
+
+.carousel-control{
+  margin-top:20%;
+  height:400px;
+}
+
+.slideshow{
+ margin-left:20%;
+ margin-right:20%;
+ margin-top:10px;
+ height:300px;
+}
+
+.item img{
+width:100%;
+height:100%;
+margin:auto;
+/*max-width: 500px;*/
+}
 }

@@ -23,7 +23,6 @@ body{
 .manual {
     overflow: auto;
     width: 90%;
-    margin-top: 10%;
 }
 .outerParentShow{
    border-radius: 10px; 

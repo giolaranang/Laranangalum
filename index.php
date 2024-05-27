@@ -17,19 +17,18 @@ session_start();
     <link rel="stylesheet" href="style.css">
     <head>
        <title>Laranang Alum</title> 
-    </head>
-    <body>
-      <div class="scroll-bg" id="manualCalcu" >
-      <div class="menu"> 
+       <div class="menu"> 
         <div class="column leftside-menu">         
             <button class="" id="loadCal" onclick="loadCalculator()">POS System</button>
-            <button class="" onclick="loadSample()">Employee Management</button>
+            <button class="" id="loademp" onclick="loademployee_m()">Employee Management</button>
         </div>
         <div class="column">
             <button class="login">Login</button>
         </div>
       </div>
-
+    </head>
+    <body>
+      <div class="scroll-bg" id="manualCalcu" >    
 <?php
   include 'innersample.php';
 ?>
@@ -61,12 +60,13 @@ window.onload=function(){
   /*alert("<?php echo "datef: ". $_SESSION["date"]; ?>");*/
   /* alert("<?php echo "datet: ". $_SESSION["dateto"]; ?>");*/
     <?php 
+
    if (!isset($_SESSION["operation"])){
        $_SESSION["operation"]="basic";
      }
-       if ($_SESSION["operation"]=='SUMMARY'){
+   if ($_SESSION["operation"]=="employee_m"){
       ?> 
-       loadSum();
+      document.getElementById("loademp").click();
      <?php   
     }else if ($_SESSION["operation"]=="loadcalcu"){
     ?>
@@ -74,9 +74,9 @@ window.onload=function(){
     <?php     
     }
      ?>
-
-}
     
+}
+
 function loadPrice() {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
@@ -99,7 +99,7 @@ function loadCalculator() {
   xhttp.send();
 }
 
-function loadSample(){
+function loademployee_m(){
     var xhttp = new XMLHttpRequest();
        xhttp.onreadystatechange = function() {
        if (this.readyState == 4 && this.status == 200) {
@@ -107,17 +107,6 @@ function loadSample(){
     }
   };
   xhttp.open("GET", "employee_management.php", true);
-  xhttp.send(); 
-}
-
-function loadSum(){
-    var xhttp = new XMLHttpRequest();
-       xhttp.onreadystatechange = function() {
-       if (this.readyState == 4 && this.status == 200) {
-       document.getElementById("manualCalcu").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", "summary.php", true);
   xhttp.send(); 
 }
 

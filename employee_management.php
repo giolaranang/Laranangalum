@@ -3,7 +3,7 @@
       <h1> 
           Cash Advance
       </h1>
-    <form action="save.php" method="POST">
+    <form action="save.php" method="POST" class="menu">
       <div class="form-group">
           <select name="name" class="form-control form-control-lg">
              <option value="" disabled selected>Click here to Select an Employee</option>
@@ -41,9 +41,11 @@
       </form>
       <br>
       <form action= "show.php">
-          <input id="showID" class="btn btn-info btn-lg" type="submit"/>
+          <input id="showID" class="btn btn-info btn-lg" value="Show Records" type="submit"/>
       </form>
       <br>
           <Button onclick="deletealert()" id="deleteID" class="btn btn-danger btn-lg" type="button" >Delete All</button>
           <Button type="button" onclick="operations('back')" class="btn btn-danger btn-lg">Back</button>
     </div>
+
+ 

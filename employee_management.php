@@ -1,3 +1,6 @@
+ <?php
+  $_SESSION["operation"]="employee_m";
+ ?>
  <center>
       <br>
       <h1> 
@@ -47,5 +50,3 @@
           <Button onclick="deletealert()" id="deleteID" class="btn btn-danger btn-lg" type="button" >Delete All</button>
           <Button type="button" onclick="operations('back')" class="btn btn-danger btn-lg">Back</button>
     </div>
-
- 

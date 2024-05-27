@@ -22,7 +22,7 @@ session_start();
       <div class="scroll-bg" id="manualCalcu" >
       <div class="menu"> 
         <div class="column leftside-menu">         
-            <button class="" onclick="loadCalculator()">POS System</button>
+            <button class="" id="loadCal" onclick="loadCalculator()">POS System</button>
             <button class="" onclick="loadSample()">Employee Management</button>
         </div>
         <div class="column">
@@ -56,21 +56,15 @@ session_start();
                   alert("cancelled");
               }
           }
-    window.onload=function(){
-             /* document.getElementById("showID").value ="Show";
-              document.getElementById("deleteID").value ="Delete";
-              document.getElementById('date').valueAsDate = new Date;*/
-
-  /*  alert("<?php echo "datef: ". $_SESSION["datefrom"]; ?>");*/
+window.onload=function(){
+  /* document.getElementById('date').valueAsDate = new Date;*/
+  /*alert("<?php echo "datef: ". $_SESSION["date"]; ?>");*/
   /* alert("<?php echo "datet: ". $_SESSION["dateto"]; ?>");*/
-    /*
-    <?php
-  
+    <?php 
    if (!isset($_SESSION["operation"])){
-       $_SESSION["operation"]=="basic";
+       $_SESSION["operation"]="basic";
      }
-  
-  if ($_SESSION["operation"]=='SUMMARY'){
+       if ($_SESSION["operation"]=='SUMMARY'){
       ?> 
        loadSum();
      <?php   
@@ -79,10 +73,9 @@ session_start();
        document.getElementById("loadCal").click();
     <?php     
     }
-    ?>
-*/
+     ?>
+
 }
- 
     
 function loadPrice() {
         var xhttp = new XMLHttpRequest();

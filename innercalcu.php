@@ -1,5 +1,6 @@
 <?php
 include "dbaseConn.php";
+$_SESSION["operation"]="loadcalcu";
 ?>
 <center>
 <!--income-->

@@ -3,7 +3,7 @@ include "dbaseConn.php";
 ?>
 <center>
 <!--income-->
-<form method="POST" action="innercalcucomp.php" class="manual">
+<form method="POST" action="innercalcucomp.php" class="manual menu">
 <label>Date: </label><input type="date" name="date"/>
 <div style="overflow:auto;width:100%;color:#003C00;">
 <?php
@@ -24,13 +24,14 @@ if ($result_income->num_rows > 0){
 </div>
 <hr>
 <input type="number" name="calcuValue1" id="calcuValue1"/>
-<Button type="submit" onclick="operations('income')"class="btn btn-outline-secondary">Add</button>
+<Button type="submit" onclick="operations('income')"class="btn btn-outline-secondary">Add Order</button>
 <Button type="submit" onclick="operations('undo')"class="btn btn-outline-secondary">Undo</button>
+<Button type="submit" onclick="operations('delete_income')"class="btn btn-outline-secondary">Clear Values</button>
 <input type="hidden" id="checker" name="checker"/>
  <br>
 <label>Total Income:</label>
 <div id="Iresult"><?php echo number_format(array_sum($total))?></div>
-<Button type="submit" onclick="operations('delete_income')"class="btn btn-outline-secondary">Clear</button>
+
 <hr class="expenses">
 <!--expense-->
 <div style="overflow:auto;width:300px;color:maroon;">
@@ -52,12 +53,12 @@ if ($result_expense->num_rows > 0){
 </div>
 <hr>
 <input type="number" name="calcuValue2" id="calcuValue2"/>
-<Button type="submit" onclick="operations('expense')"class="btn btn-outline-secondary">Add</button>
+<Button type="submit" onclick="operations('expense')"class="btn btn-outline-secondary">Add Expense</button>
 <Button type="submit" onclick="operations('undo_expense')"class="btn btn-outline-secondary">Undo</button>
+<Button type="submit" onclick="operations('delete_expense')"class="btn btn-outline-secondary">Clear Values</button>
  <br>
  <label>Total Expense:</label>
  <div id="Eresult"><?php echo number_format(array_sum($totalExpense));?></div>
-<Button type="submit" onclick="operations('delete_expense')"class="btn btn-outline-secondary">Clear</button>
 <hr>
 <!--change data-->
 <?php
@@ -74,7 +75,7 @@ if ($result_change->num_rows > 0){
 ?>
 <input type="number" name="currentc" id="currentc" value="<?php echo $current_change;?>"/>
 <Button id="changebutton" type="submit" onclick="operations('currentc')"class="btn btn-outline-secondary">Coins</button>
-<input type="number" name="cash_in" id="cash_in" placeholder="Divino Cash In"/>
+<input type="number" name="cash_in" id="cash_in" placeholder="Cash In"/>
 <br>
 <label style="font-size:20px;">Collection: <?php echo number_format(array_sum($total)-array_sum($totalExpense));?></label>
 <br>
@@ -107,12 +108,12 @@ if ($balanced_resultfinal<0){
 ?>
 color:#CA002A;
 <?php
-$textfinal="Kulang";
+$textfinal=" Short";
 }else{
 ?>    
 color: green;
 <?php 
-$textfinal="Sobra";
+$textfinal=" Excess";
 }
 ?>
 "

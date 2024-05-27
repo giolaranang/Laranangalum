@@ -20,7 +20,7 @@ switch ($checker){
        $manipulate_data = "Delete from cash_in order by Id desc limit 1";
     break;
     case "expense":
-       $manipulate_data = "Insert into cash_out(carrsh_out_amt) Values ('$expense')"; 
+       $manipulate_data = "Insert into cash_out(cash_out_amt) Values ('$expense')"; 
     break;
     case "delete_expense":
         $manipulate_data ="Delete from cash_out";
